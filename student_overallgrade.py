@@ -18,9 +18,7 @@ def cal_grade(cgpa1):
     return 'P'    
   else:
     return 'F' 
-
-# grade = cal_grade(7.90)
-# print "Grade for given cgpa: 7.98: ", grade
+    
 
 stud_formatted_data = {}
 """
