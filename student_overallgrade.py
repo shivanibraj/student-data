@@ -18,44 +18,14 @@ def cal_grade(cgpa1):
     return 'P'    
   else:
     return 'F' 
-    
+
 
 stud_formatted_data = {}
-"""
-  stud_formatted_data = {
-    "2014" = {
-      "CS" = [stud1_record, stud2_record, ..],
-      "IT" = [stud10_record, stud11_record, ..].
-      ...
-      ...,
-      "ME" = [stud1_record, stud2_record, ..]
-    },
-    "2015" = {
-      "p059" = [row_data1 ],
-      "fpat019" = [row_data2],
-      "CS" = [stud31_record, stud32_record, ..],
-      "IT" = [stud41_record, stud42_record, ..].
-      ...
-      ...,
-      "Civil" = [stud1_record, stud2_record, ..]
-    },
-    ...
-    ...
-    ...,
-    "2019" = {
-      "CS" = [stud6_record, stud7_record, ..],
-      "IT" = [stud41_record, stud42_record, ..].
-      ...
-      ...,
-      "B.Sc." = [stud1_record, stud2_record, ..]
-    },
-  }
-"""
 
 csv.register_dialect('myDialect', quoting=csv.QUOTE_ALL, skipinitialspace=True)
 
 students_record = []
-with open('students_data.csv', 'r') as readFile:
+with open('sample_student_data.csv', 'r') as readFile:
   reader = csv.reader(readFile, delimiter = " ")
   students_record = list(reader)
   # Header: ['ID', 'Student Name', 'Student Email', 'Branch Code', 'Academic Batch', 'CGPA', 'Sign_In_Count']
